@@ -1,0 +1,135 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e7d32;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Search Bar (if present) */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.search-form input[type="text"] {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-form button {
+    padding: 6px 10px;
+    margin-left: 5px;
+    background-color: #fff;
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #2e7d32;
+    color: #fff;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+main h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #2e7d32;
+}
+
+main p {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1c0606ca;
+}
+
+/* Three Column Layout like a grid for better ui experience */
+.three-column-layout {
+    display: flex;
+    gap: 2%;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32%;
+    justify-content: space-around;
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.column img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #2e7d32;
+    color: #fff;
+}

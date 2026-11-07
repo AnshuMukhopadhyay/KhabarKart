@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.plans-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Equal space on left, right and between cards */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the entire container */
+}
+
+.plan-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin: 10px; /* slight margin to avoid tight sticking on wrap */
+}
+
+.plan-card:hover {
+    transform: scale(1.05);
+}
+
+.plan-card h2 {
+    color: #2e7d32;
+}
+
+.plan-card .price {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.plan-card ul {
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.plan-card li {
+    margin-bottom: 5px;
+}
+
+.plan-card button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.plan-card button:hover {
+    background-color: #256329;
+}
+
+/* Optional: Mobile view stacking */
+@media (max-width: 768px) {
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-card {
+        max-width: 90%;
+    }
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #2e7d32;
+    color: #fff;
+    margin-top: 50px;
+}

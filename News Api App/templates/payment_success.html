@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Successful</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='payment_success.css') }}">
+</head>
+<body>
+    <div class="success-container">
+        <h2>Payment Successful!</h2>
+        <p>Thank you for your payment.</p>
+        <p>Your Plan has been upgraded</p>
+
+        <form action="{{ url_for('home') }}" method="get">
+            <button type="submit" class="back-btn">Back to Home</button>
+        </form>
+    </div>
+</body>
+</html>

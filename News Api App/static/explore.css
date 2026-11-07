@@ -1,0 +1,110 @@
+/* Global Styles */
+body {
+    background: linear-gradient(to right, #006400, #00a84f); /* Green gradient for KhabarKart theme */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Header/Navbar */
+header {
+    background-color: #003300;
+    color: white;
+    padding: 15px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Search Bar */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-form button {
+    padding: 8px 15px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #e65c00;
+}
+
+/* Main Heading */
+main h1 {
+    text-align: center;
+    color: white;
+    margin: 20px 0;
+}
+
+/* News Container & Cards */
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.news-card {
+    background-color: white;
+    color: #003300;
+    width: 300px;
+    margin: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.news-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.news-card a {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #003300;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}

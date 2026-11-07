@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhabarKart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='explore.css') }}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">KhabarKart</div>
+
+            <form action="{{ url_for('explore') }}" method="post" class="search-form">
+               <input type="text" name="search_term" placeholder="Search here..." required>
+               <button type="submit">Search</button> 
+            </form>
+           
+            
+        </div> 
+    </header>
+
+    <main>
+        <h1>Welcome to KhabarKart!</h1>
+         <div class="news-container">
+        {% for article in news %}
+            <div class="news-card">
+                <h2>{{ article.title }}</h2>
+                <p>{{ article.description }}</p>  
+                <p><a href="{{ article.url }}" target="_blank">Click here for link:</a></p>
+                <hr>
+            </div>
+        {% endfor %}
+    </div>
+        
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KhabarKart. All rights reserved.</p>
+    </footer>
+</body>
+</html>

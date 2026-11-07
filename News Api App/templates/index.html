@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhabarKart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">KhabarKart</div>
+            <nav>
+                <ul>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="subscription.html">Subscription</a></li>
+                </ul>
+            </nav>
+
+            
+
+            <!-- Logout Button for this we have used 2 forms for better undertanding and a cean forms and avoiding html confusion-->
+            <form action="{{ url_for('logout') }}" method="get" style="display:inline;">
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <h1>Welcome to KhabarKart!</h1>
+
+        {% if name %}
+            <p>Hello, {{name}}!!!</p>
+        {% else %}
+            <p>Hello, Guest!!!</p>
+        {% endif %}
+
+        <p>The best basket of personalized news you can order...</p>
+        <div class="three-column-layout">
+
+    <div class="column">
+        <img src="{{ url_for('static', filename='images/dhoni_img.png') }}" alt="Left 1">
+        <img src="{{ url_for('static', filename='images/Ai_news.png') }}" alt="Left 2">
+        <img src="{{ url_for('static', filename='images/Messi_img.png') }}" alt="Left 3">
+        <img src="{{ url_for('static', filename='images/Federer_img.png') }}" alt="Left 4">
+        <img src="{{ url_for('static', filename='images/Blackhole_img.png') }}" alt="Left 5">
+    </div>
+
+    <div class="column">
+        <img src="{{ url_for('static', filename='images/Superman.png') }}" alt="Center 1">
+        <img src="{{ url_for('static', filename='images/BMW.png') }}" alt="Center 2">
+        <img src="{{ url_for('static', filename='images/nutrition.png') }}" alt="Center 3">
+        <img src="{{ url_for('static', filename='images/space.png') }}" alt="Center 4">
+        <img src="{{ url_for('static', filename='images/climate.png') }}" alt="Center 5">
+    </div>
+
+    <div class="column">
+        <img src="{{ url_for('static', filename='images/F1.png') }}" alt="Right 1">
+        <img src="{{ url_for('static', filename='images/bombaytimes.png') }}" alt="Right 2">
+        <img src="{{ url_for('static', filename='images/health.png') }}" alt="Right 3">
+        <img src="{{ url_for('static', filename='images/press.png') }}" alt="Right 4">
+        <img src="{{ url_for('static', filename='images/billionaires.png') }}" alt="Right 5">
+    </div>
+
+</div>
+
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li style="color: green;">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KhabarKart. All rights reserved.</p>
+    </footer>
+</body>
+</html>

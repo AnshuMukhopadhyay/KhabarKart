@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ICICI Payment Gateway</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='icici.css') }}">
+</head>
+<body>
+    <div class="payment-container">
+        <h2>ICICI Secure Payment</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Your Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount to Pay (₹)</label>
+                <input type="number" id="amount" placeholder="Enter amount" required>
+            </div>
+            </form>
+
+            <form action="{{ url_for('proceed_to_pay') }}" method="get" style="display:inline;">
+                <button type="submit">Proceed to pay</button>
+            </form>
+        
+    </div>
+</body>
+</html>
+<script>
+    setTimeout(function() {
+        window.location.href = "{{ url_for('session_expired') }}";
+    }, 1 * 60 * 1000); 
+</script>

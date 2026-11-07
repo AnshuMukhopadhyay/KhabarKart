@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhabarKart - Subscription</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='subscribe.css') }}"> <!-- Same CSS file ya new bana sakta hai -->
+</head>
+<body>
+
+    <h1 style="text-align: center;">Choose Your KhabarKart Subscription</h1>
+
+    <div class="plans-container">
+
+        <!-- Kart Plan -->
+        <div class="plan-card">
+            <h2>Kart</h2>
+            <p class="price">₹99/month</p>
+            <ul>
+                <li>Access to daily news</li>
+                <li>Basic personalization</li>
+                <li>Limited explore section</li>
+            </ul>
+            <form action="{{ url_for('select_plan') }}" method="get" style="display:inline;">
+                <button type="submit">Select Plan</button>
+            </form>
+        </div>
+
+        <!-- Kart Pro Plan -->
+        <div class="plan-card">
+            <h2>Kart Pro</h2>
+            <p class="price">₹199/month</p>
+            <ul>
+                <li>Everything in Kart</li>
+                <li>Priority content updates</li>
+                <li>Full explore section</li>
+                <li>Ad-free experience</li>
+            </ul>
+            <form action="{{ url_for('select_plan') }}" method="get" style="display:inline;">
+                <button type="submit">Select Plan</button>
+            </form>
+        </div>
+
+        <!-- Kart Pro Max Plan -->
+        <div class="plan-card"> <!--this class= plan card and price are used to style it using css so that we can colour and style only those parts leaving other paara aside...-->
+            <h2>Kart Pro Max</h2>
+            <p class="price">₹299/month</p>
+            <ul>
+                <li>Everything in Kart Pro</li>
+                <li>Exclusive early access to news</li>
+                <li>Customizable news feed</li>
+                <li>VIP support</li>
+            </ul>
+            <form action="{{ url_for('select_plan') }}" method="get" style="display:inline;">
+                <button type="submit">Select Plan</button>
+            </form>
+        </div>
+
+    </div>
+  <footer>
+    <p>&copy; 2025 KhabarKart. All rights reserved.</p>
+  </footer>
+     
+</body>
+</html>
